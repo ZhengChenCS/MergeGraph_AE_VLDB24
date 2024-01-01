@@ -43,13 +43,13 @@ MergeGraph provides some tools that converts edge lists in SNAP format to binary
 If input graph is weighted, use "-t has_weight".
 
 ```bash
-./split -f input_graph_path -t \<has_weight\|no_weight\> -n number_of_subgraph -o output_graph_path
+./split -f input_graph_path -t <has_weight\|no_weight> -n number_of_subgraph -o output_graph_path
 ```
 
 #### 2.4.2. Convert the splited graph into binary format
 
 ```bash
-./convert_to_binary -n vertex_num \<input_graph_path \>output_graph_path
+./convert_to_binary -n vertex_num <input_graph_path >output_graph_path
 ```
 
 ### 2.4.3. Get transitional results
@@ -67,22 +67,22 @@ These applications will process the entire graph.
 
 ### Breadth-First Search
 ```bash
-./bfs_merge -g \<graph_1_path graph_2_path ... graph_n_path\>
+./bfs_merge -g <graph_1_path graph_2_path ... graph_n_path>
 ```
 
 ### Single Source Shortest Path
 ```bash
-./sssp_merge -g \<graph_1_path graph_2_path ... graph_n_path\>
+./sssp_merge -g <graph_1_path graph_2_path ... graph_n_path>
 ```
 
 ### Single Source Widest Path
 ```bash
-./sswp_merge -g \<graph_1_path graph_2_path ... graph_n_path\>
+./sswp_merge -g <graph_1_path graph_2_path ... graph_n_path>
 ```
 
 ### Weakly Connected Components
 ```bash
-./wcc_merge -g \<graph_1_path graph_2_path ... graph_n_path\>
+./wcc_merge -g <graph_1_path graph_2_path ... graph_n_path>
 ```
 
 ### Run applications with script
