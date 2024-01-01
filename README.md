@@ -43,7 +43,7 @@ MergeGraph provides some tools that converts edge lists in SNAP format to binary
 If input graph is weighted, use "-t has_weight".
 
 ```bash
-./split -f input_graph_path -t <has_weight\|no_weight> -n number_of_subgraph -o output_graph_path
+./split -f input_graph_path -t <has_weight|no_weight> -n number_of_subgraph -o output_graph_path
 ```
 
 #### 2.4.2. Convert the splited graph into binary format
