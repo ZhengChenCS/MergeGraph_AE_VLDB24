@@ -1,1 +1,0 @@
-/usr/bin/c++ -fopenmp -Ofast -march=native -DOPENMP -DEDGELONG CMakeFiles/convert2binary.dir/utils/convert2binary.cpp.o -o ../bin/convert2binary 

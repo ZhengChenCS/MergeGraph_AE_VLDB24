@@ -1,1 +1,0 @@
-/usr/bin/c++ -fopenmp -Ofast -march=native -DOPENMP -DEDGELONG CMakeFiles/wcc.dir/apps/WCC.C.o -o ../bin/wcc 

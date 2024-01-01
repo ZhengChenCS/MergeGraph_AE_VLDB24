@@ -1,1 +1,0 @@
-/usr/bin/c++ -fopenmp -Ofast -march=native -DOPENMP -DEDGELONG CMakeFiles/get_csr_input.dir/utils/get_csr_input.cpp.o -o ../bin/get_csr_input 

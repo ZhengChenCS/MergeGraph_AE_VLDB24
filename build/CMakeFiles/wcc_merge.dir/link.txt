@@ -1,1 +1,0 @@
-/usr/bin/c++ -fopenmp -Ofast -march=native -DOPENMP -DEDGELONG CMakeFiles/wcc_merge.dir/apps/WCC_merge.C.o -o ../bin/wcc_merge 

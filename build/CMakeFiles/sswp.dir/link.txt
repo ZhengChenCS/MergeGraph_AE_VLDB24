@@ -1,1 +1,0 @@
-/usr/bin/c++ -fopenmp -Ofast -march=native -DOPENMP -DEDGELONG CMakeFiles/sswp.dir/apps/SSWP.C.o -o ../bin/sswp 
