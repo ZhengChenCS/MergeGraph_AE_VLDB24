@@ -40,23 +40,25 @@ MergeGraph provides some tools that converts edge lists in SNAP format to binary
 
 #### 2.4.1. Split the graph into multiple files
 
+If input graph is weighted, use "-t has_weight".
+
 ```bash
-./split input_graph_path output_graph_path
+./split -f input_graph_path -t \<has_weight\|no_weight\> -n number_of_subgraph -o output_graph_path
 ```
 
 #### 2.4.2. Convert the splited graph into binary format
 
 ```bash
-./convert_to_binary input_graph_path output_graph_path
+./convert_to_binary -n vertex_num \<input_graph_path \>output_graph_path
 ```
 
 ### 2.4.3. Get transitional results
 
 ```bash
-./get_bfs_transitional_results input_graph_path output_graph_path root
-./get_sssp_transitional_results input_graph_path output_graph_path root
-./get_sswp_transitional_results input_graph_path output_graph_path root
-./get_wcc_transitional_results input_graph_path output_graph_path
+./bfs -r source -o output_result_path input_graph_path
+./sssp -r source -o output_result_path input_graph_path
+./sswp -r source -o output_result_path input_graph_path
+./wcc -r source -o output_result_path input_graph_path
 ```
 
 ### 2.5. Running
@@ -65,33 +67,37 @@ These applications will process the entire graph.
 
 ### Breadth-First Search
 ```bash
-./bfs binary_graph_path output_results_path root
+./bfs_merge -g \<graph_1_path graph_2_path ... graph_n_path\>
 ```
 
 ### Single Source Shortest Path
 ```bash
-./sssp binary_graph_path output_results_path root
+./sssp_merge -g \<graph_1_path graph_2_path ... graph_n_path\>
 ```
 
 ### Single Source Widest Path
 ```bash
-./sswp binary_graph_path output_results_path root
+./sswp_merge -g \<graph_1_path graph_2_path ... graph_n_path\>
 ```
 
 ### Weakly Connected Components
 ```bash
-./wcc binary_graph_path output_results_path
+./wcc_merge -g \<graph_1_path graph_2_path ... graph_n_path\>
 ```
 
 ### Run applications with script
 
 ```bash
 cd script
-bash split.sh
-bash convert_to_binary.sh
-bash get_transitional_results.sh
-bash bfs.sh
-bash sssp.sh
-bash sswp.sh
-bash wcc.sh
+bash get_input.sh
+cd preprocess
+bash bfs_preprocess.sh
+bash sssp_preprocess.sh
+bash sswp_preprocess.sh
+bash wcc_preprocess.sh
+cd ../merge
+bash bfs_merge.sh
+bash sssp_merge.sh
+bash sswp_merge.sh
+bash wcc_merge.sh
 ```

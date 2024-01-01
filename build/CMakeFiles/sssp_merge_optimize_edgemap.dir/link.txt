@@ -1,0 +1,1 @@
+/usr/bin/c++ -fopenmp -Ofast -march=native -DOPENMP -DEDGELONG CMakeFiles/sssp_merge_optimize_edgemap.dir/apps/SSSP_merge_optimize_edgemap.C.o -o ../bin/sssp_merge_optimize_edgemap 

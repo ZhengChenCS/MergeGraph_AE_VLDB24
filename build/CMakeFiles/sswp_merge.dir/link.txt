@@ -1,0 +1,1 @@
+/usr/bin/c++ -fopenmp -Ofast -march=native -DOPENMP -DEDGELONG CMakeFiles/sswp_merge.dir/apps/SSWP_merge.C.o -o ../bin/sswp_merge 

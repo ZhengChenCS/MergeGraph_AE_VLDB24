@@ -1,0 +1,1 @@
+/usr/bin/c++ -fopenmp -Ofast -march=native -DOPENMP -DEDGELONG CMakeFiles/bfs.dir/apps/BFS.C.o -o ../bin/bfs 

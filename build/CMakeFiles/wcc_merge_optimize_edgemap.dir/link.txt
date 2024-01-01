@@ -1,0 +1,1 @@
+/usr/bin/c++ -fopenmp -Ofast -march=native -DOPENMP -DEDGELONG CMakeFiles/wcc_merge_optimize_edgemap.dir/apps/WCC_merge_optimize_edgemap.C.o -o ../bin/wcc_merge_optimize_edgemap 

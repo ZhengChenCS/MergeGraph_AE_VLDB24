@@ -1,0 +1,1 @@
+/usr/bin/c++ -fopenmp -Ofast -march=native -DOPENMP -DEDGELONG CMakeFiles/sssp_merge.dir/apps/SSSP_merge.C.o -o ../bin/sssp_merge 
