@@ -10,8 +10,6 @@ This is the code for the paper "Enabling Window-Based Monotonic Graph Analytics 
 
 - [CMake](https://gitlab.kitware.com/cmake/cmake)
 - OpenMP and C++17
-- Optional:[Ligra](https://github.com/jshun/ligra)
-- Optional:[RisGraph](https://github.com/thu-pacman/RisGraph)
 
 ### 2.2. Compilation
 
@@ -43,7 +41,7 @@ MergeGraph provides some tools that converts edge lists in SNAP format to binary
 #### 2.4.1. Split the graph into multiple files
 
 ```bash
-./split.sh input_graph_path output_graph_path
+./split input_graph_path output_graph_path
 ```
 
 #### 2.4.2. Convert the splited graph into binary format
@@ -52,10 +50,13 @@ MergeGraph provides some tools that converts edge lists in SNAP format to binary
 ./convert_to_binary input_graph_path output_graph_path
 ```
 
-### 2.4.3. Get transition results
+### 2.4.3. Get transitional results
 
 ```bash
-./get_transition_results input_graph_path output_results_path
+./get_bfs_transitional_results input_graph_path output_graph_path root
+./get_sssp_transitional_results input_graph_path output_graph_path root
+./get_sswp_transitional_results input_graph_path output_graph_path root
+./get_wcc_transitional_results input_graph_path output_graph_path
 ```
 
 ### 2.5. Running
@@ -80,4 +81,17 @@ These applications will process the entire graph.
 ### Weakly Connected Components
 ```bash
 ./wcc binary_graph_path output_results_path
+```
+
+### Run applications with script
+
+```bash
+cd script
+bash split.sh
+bash convert_to_binary.sh
+bash get_transitional_results.sh
+bash bfs.sh
+bash sssp.sh
+bash sswp.sh
+bash wcc.sh
 ```
